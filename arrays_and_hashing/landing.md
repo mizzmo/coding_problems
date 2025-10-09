@@ -12,19 +12,19 @@ Shallow Copy:
 A Shallow Copy creates a new container object in which is stored references to the original objects in the original data structure.
 **Changes to objects in the new data structure appear in the objects in the original data structure and vice versa**
 
-''' 
+```python
    import copy
    shallow_copy = copy.copy(original)
-'''
+```
 
 Deep Copy:
 A Deep Copy creates a new container object and then recursively inserts copies of the items from the original.
 **Changes made to the copy do not reflect in the original**
 
-'''
+```python
    import copy
    deep_copy = copy.deepcopy(original)
-'''
+```
 
 ### Dynamic Arrays
 
@@ -47,28 +47,37 @@ When all the space in a Dynamic Array, A1, is consumed and a new item needs to b
 Dynamic Arrays are implemented in Python by default as Lists.
 Operations:
 Declare a List: 
-'''
+
+```python
     list = ["item1", "item2"]
     # Alternatively you can use the Constructor to declare a list.
     list = list(("item1", "item2"))
-'''
+```
+
 Adding an item to a list:
-'''
+
+```python
     list.append("item3")
-'''
+```
+
 Removing an item from the list using position.
-'''
+
+```python
     list.pop()
     # To remove a specific position, specify the index in pop
     list.pop(1)
-'''
+```
+
 Removing an item from the list using the item.
-'''
+
+```python
     # Removes the first appearance of "item1" in the list
     list.remove("item1")
-'''
+```
+
 Other useful commands:
-'''
+
+```python
     # Reverse the list
     list.reverse()
     # Insert an item at a specific position
@@ -79,6 +88,4 @@ Other useful commands:
     list.count("item")
     # Shallow copy the list
     list_copy = list.copy()
-'''
-
-
+```
