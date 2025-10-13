@@ -253,7 +253,7 @@ Difference:
 ```
 
 This can be explained visually by the following diagram:
-[Diagram](![alt text](https://www.learnbyexample.org/wp-content/uploads/python/Python-Set-Operatioons.png))
+![Diagram](https://www.learnbyexample.org/wp-content/uploads/python/Python-Set-Operatioons.png)
 
 ### Prefix Sum
 
