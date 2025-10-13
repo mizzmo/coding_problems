@@ -9,6 +9,7 @@
 - [Copies](#copies)
 - [Dynamic Arrays](#dynamic-arrays)
 - [Hashmaps](#hashmaps)
+- [Prefix Sum](#prefix-sum)
 
 ### Copies
 
@@ -50,6 +51,7 @@ When all the space in a Dynamic Array, A1, is consumed and a new item needs to b
 
 Dynamic Arrays are implemented in Python by default as Lists.
 Operations:
+
 Declare a List:
 
 ```python
@@ -146,4 +148,54 @@ Removing items from a dictionary:
     del dictionary
     # Empty the dictionary of all items
     dictionary.clear()
+```
+
+### Prefix Sum
+
+What is a Prefix Sum?
+A prefix sum at index i is the sum of all elements of the array from the start up to index i, inclusive.
+A Prefix Sum Array is an array representation of the Prefix Sum at **every index in a list**.
+For example:
+*Let A1 = [10, 20, 10, 5, 15]*
+The Prefix Sum Array would be:
+*A2 = [10, 10+20, 10+20+10, 10+20+10+5, 10+20+10+5+15] = [10, 30, 40, 45, 60]*
+
+We can calculate the prefix sum at a specific index by adding all the items in a list leading up to and including the item at the desired index *as follows*:
+prefixSum[0] = 10
+prefixSum[1] = 10 + 20 = 30
+prefixSum[2] = 10 + 20 + 10 = 40
+prefixSum[3] = 10 + 20 + 10 + 5 = 45
+prefixSum[4] = 10 + 20 + 10 + 5 + 15 = 60
+
+#### Prefix Sum Array Algorithm
+
+*Time Complexity = O(n)*
+*Space Complexity = O(n)*
+
+```python
+    input_array = [10, 20, 10, 5, 15]
+    
+    # Declare an array of identical size to that of the input array
+    prefix_array = [0] * len(input_array)
+
+    # Initialise the first element of the prefix array
+    prefix_array[0] = input_array[0]
+
+    # Loop through the remaining elements
+    for i in range(1, len(input_array)):
+        prefix_array[i] = prefix_array[i - 1] + input_array[i]
+
+    print(prefix_array)  # Output: [10, 30, 40, 45, 60]
+```
+
+Visualised:
+
+```utf-8
+    For i = 1:
+    prefix_array[1 - 1] is prefix_array[0] which is 10.
+    input_array[1] is 20.
+    10 + 20 = 30.
+    prefix_array[1] = 30.
+
+    In one line: prefix_array[1] = 10+20.
 ```
