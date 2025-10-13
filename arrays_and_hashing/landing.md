@@ -174,7 +174,7 @@ prefixSum[4] = 10 + 20 + 10 + 5 + 15 = 60
 
 ```python
     input_array = [10, 20, 10, 5, 15]
-    
+
     # Declare an array of identical size to that of the input array
     prefix_array = [0] * len(input_array)
 
@@ -192,10 +192,14 @@ Visualised:
 
 ```utf-8
     For i = 1:
-    prefix_array[1 - 1] is prefix_array[0] which is 10.
-    input_array[1] is 20.
-    10 + 20 = 30.
+        prefix_array[1 - 1] is prefix_array[0] which is 10.
+        input_array[1] is 20.
+        10 + 20 = 30.
+
     prefix_array[1] = 30.
 
-    In one line: prefix_array[1] = 10+20.
+    In one line: 
+        prefix_array[1] = 10+20.
+    Is the same as:
+        prefix_array[i] = prefix_array[i - 1] + input_array[i]
 ```
