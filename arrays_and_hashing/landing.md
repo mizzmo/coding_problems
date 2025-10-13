@@ -6,6 +6,10 @@
 
 ## Prerequisites
 
+- [Copies](#copies)
+- [Dynamic Arrays](#dynamic-arrays)
+- [Hashmaps](#hashmaps)
+
 ### Copies
 
 Shallow Copy:
@@ -46,7 +50,7 @@ When all the space in a Dynamic Array, A1, is consumed and a new item needs to b
 
 Dynamic Arrays are implemented in Python by default as Lists.
 Operations:
-Declare a List: 
+Declare a List:
 
 ```python
     list = ["item1", "item2"]
@@ -88,4 +92,58 @@ Other useful commands:
     list.count("item")
     # Shallow copy the list
     list_copy = list.copy()
+```
+
+### Hashmaps
+
+Hashmaps are indexed data structures that make use of a Hash Function to compute keys into corresponding buckets. The Hash Function takes a Key and translates it to the index of a bucket in the bucket list. If a Collision occurs, where different keys correspond to the same bucket index, a list is used in that bucket to store multiple items. The index then also refers to a position in that list. There can only be one of each key in a Hashmap.
+*In Python, Dictionaries are HashMaps.*
+
+Declaring a Dictionary:
+
+```python
+    # Use curly brackets
+    dictionary = {}
+    # Can add items to initial dictionary
+    dictionary = {"key" : "value"}
+```
+
+Access an item in a Dictionary:
+
+```python
+    # Get a specific item at a given key
+    dictionary.get("key")
+    # Get a list of all keys
+    keys = dictionary.keys()
+    # Get a list of all values
+    values = dictionary.values()
+    # Get a list of tuples of each Key, Value pair
+    items = dictionary.items()
+    # Check if a key is in a dictionary
+    if "key" in dictionary#
+        print("True")
+```
+
+Adding an item to a Dictionary:
+
+```python
+    # Add directly
+    dictionary["key"] = "value"
+    # Using update (adds if not in dict, update if is)
+    dictionary.update({"key", "value"})
+```
+
+Removing items from a dictionary:
+
+```python
+    # Remove a specific item
+    dictionary.pop("key")
+    # Remove the last inserted item
+    dictionary.popitem()
+    # Remove using del
+    del dictionary["key"]
+    # Remove the entire dictionary object
+    del dictionary
+    # Empty the dictionary of all items
+    dictionary.clear()
 ```
