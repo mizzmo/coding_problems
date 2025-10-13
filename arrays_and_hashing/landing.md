@@ -2,7 +2,7 @@
 
 ## Problems
 
-1. Contains Duplicate
+1. [Contains Duplicate](/arrays_and_hashing/contains_duplicate.py)
 
 ## Prerequisites
 
@@ -253,6 +253,7 @@ Difference:
 ```
 
 This can be explained visually by the following diagram:
+
 ![Diagram](https://www.learnbyexample.org/wp-content/uploads/python/Python-Set-Operatioons.png)
 
 ### Prefix Sum
