@@ -9,6 +9,7 @@
 - [Copies](#copies)
 - [Dynamic Arrays](#dynamic-arrays)
 - [Hashmaps](#hashmaps)
+- [Sets](#sets)
 - [Prefix Sum](#prefix-sum)
 
 ### Copies
@@ -149,6 +150,110 @@ Removing items from a dictionary:
     # Empty the dictionary of all items
     dictionary.clear()
 ```
+
+### Sets
+
+A type of data structure that stores distinct elements (Unique), i.e, only one of each element can be stored in a set.
+Sets can be ordered and unordered.
+
+In Python, sets are **Unchangeable**, meaning once an item is added, it **cannot be changed, only removed**.
+*You can still add and remove items from a Set in Python*
+
+Declaring a set:
+
+```python
+    # Uses curly brackets
+    my_set = {"item", "item2"}
+    # Set items can be of any datatype as long as they are unique
+    my_set = {"item", 0, True}
+
+    # Arrays can be converted to sets by using the Constructor
+    # In this case, duplicates are removed in the set.
+    my_array = [1,2,3,3,4]
+    my_set = set(my_array)
+    # This is useful for finding duplicates in arrays, as the length of the array and set will be different if there is a duplicate present
+```
+
+Accessing set items:
+*You cannot access specific set items by Index or Key, but you can loop through items and do certain operations.*
+
+```python
+    # Loop through set items
+    for x in my_set:
+        print(x) 
+    # Check if an item is in a set
+    if "item" in my_set:
+        print("In Set")
+```
+
+Adding items to a set:
+
+```python
+    # Add items to a set using the add function
+    my_set.add("item")
+    # You can add entire iterables (Lists, Tuples, Dictionaries, Sets...) to a set using update.
+    my_set.update(my_other_set)
+```
+
+Removing items for a set:
+
+```python
+    # Removing using remove (this will raise an error if the item does not exist)
+    my_set.remove("item")
+
+    # Removing using Discard (this will NOT raise an error if the item does not exist)
+    my_set.discard("item")
+
+    # You can empty a set using clear
+    my_set.clear()
+```
+
+Union and Intersection and Difference:
+*You can use special Union and Intersection commands for manipulating multiple sets in Python*
+
+Union:
+
+```python
+    # Union returns a new set that contains all items from the given sets.
+    my_union = my_set.union(my_other_set, my_different_set)
+
+    # You can alternatively use the "|" operator to do the same thing
+    my_union = my_set | my_other_set | my_different_set
+
+    # This also works with different iterables like Lists and Tuples etc, but only with the ".union" version.
+    my_union = my_set.union(my_list)
+```
+
+Intersection:
+
+```python
+    # Intersection keeps only the duplicates of the given sets. (The items that appear in both sets exclusively)
+    my_intersection = my_set.intersection(my_other_set)
+    # Again, this works with the "&" operator.
+    my_intersection = my_set & my_other_set
+
+    # This also works with different iterables like Lists and Tuples etc, but only with the ".intersection" version.
+    my_union = my_set.intersection(my_list)
+```
+
+Difference:
+
+```python
+    # Difference returns a new set that only contains the items from the FIRST set that are not present in the other sets.
+    my_difference = my_set.difference(my_other_set)
+
+    # Like the other two, you can alternatively use the "-" operator.
+    my_difference = my_set - my_other_set
+
+    # This also works with different iterables like Lists and Tuples etc, but only with the ".difference" version.
+    my_union = my_set.difference(my_list)
+
+    # The symmetric_difference() method will keep only the elements that are NOT present in both sets.
+    my_s_difference = my_set.symmetric_difference(my_other_set)
+```
+
+This can be explained visually by the following diagram:
+[Diagram](![alt text](https://www.learnbyexample.org/wp-content/uploads/python/Python-Set-Operatioons.png))
 
 ### Prefix Sum
 
