@@ -1,6 +1,9 @@
-# My Solution
+# Attempt 1 - Sorting
+# Time Complexity - O(n log n)
+# Space Complexity - O(n)
 
-class Solution:
+
+class Solution0:
     def isAnagram(self, s: str, t: str) -> bool:
         # Contains the exact same characters in a different order.
         if len(s) != len(t):
@@ -13,10 +16,39 @@ class Solution:
         word_a.sort()
         word_b.sort()
         # Check if the arrays are the same
-        for i in range(0, len(word_a)):
-            if word_a[i] == word_b[i]:
-                continue
-            else:
-                return False
-
+        if word_a != word_b:
+            return False
         return True
+    
+    
+    
+# Attempt 2 - Hashmaps
+# Time Complexity - O(n)
+# Space Complexity - O(n)
+class Solution1:
+    def isAnagram(self, s: str, t: str) -> bool:
+        # Quickly remove non-anagrams with differing lengths
+        if len(s) != len(t):
+            return False
+        
+        # Create two hashmaps to represent the number of each character
+        a, b = {}, {}
+
+        for i in range(0, len(s)):
+            # For each character, check if it is in the hashmap and add +1 to total appearances.
+            if s[i] in a:
+                a[s[i]] = a[s[i]] + 1
+            else:
+                 a[s[i]] = 1
+            # Same for other word.
+            if t[i] in b:
+                b[t[i]] = b[t[i]] + 1
+            else:
+                 b[t[i]] = 1
+
+        # Check if equal
+        if a != b:
+            return False
+        return True
+        
+        
