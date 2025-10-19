@@ -3,6 +3,8 @@
 ## Problems
 
 1. [Contains Duplicate](/arrays_and_hashing/contains_duplicate.py)
+2. [Valid Anagram](/arrays_and_hashing/valid_anagram.py)
+3. [Two Sum](/arrays_and_hashing/two_sum.py)
 
 ## Prerequisites
 
