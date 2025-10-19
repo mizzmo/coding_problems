@@ -2,6 +2,8 @@
 # Uses a Hashmap to track the appearances of numbers
 # by using the number as a key with the counter as a value.
 
+# Given an integer array nums, return true if any value appears more than once in the array, otherwise return false.
+
 # Time Complexity: O(n)
 # Space Complexity: O(n)
 # (Optimal)
