@@ -6,6 +6,7 @@
 2. [Valid Anagram](/arrays_and_hashing/valid_anagram.py)
 3. [Two Sum](/arrays_and_hashing/two_sum.py)
 4. [Group Anagrams](/arrays_and_hashing/group_anagrams.py)
+5. [Top K Elements](/arrays_and_hashing/top_K_elements.py)
 
 ## Prerequisites
 
