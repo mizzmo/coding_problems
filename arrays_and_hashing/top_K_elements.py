@@ -12,7 +12,7 @@ class Solution0:
         # Create a hashmap to store a counter for each number in the list.
         counts = {}
         for i in range(len(nums)):
-            # Add the number of occurances to the hashmap
+            # Add the number of occurrences to the hashmap
             if nums[i] in counts:
                 counts[nums[i]] += 1
             else:
@@ -24,12 +24,12 @@ class Solution0:
         
         # Repeat for K
         for j in range(k):
-            # Track the higest occurances and which key that corresponds to
-            highest_occurences = 0
+            # Track the highest occurrences and which key that corresponds to
+            highest_occurrences = 0
             highest_key = 0
             for key in counts.keys():
-                if counts[key] > highest_occurences:
-                    highest_occurences = counts[key]
+                if counts[key] > highest_occurrences:
+                    highest_occurrences = counts[key]
                     highest_key = key
             # Remove the key from the hashmap
             counts.pop(highest_key)
