@@ -38,6 +38,40 @@ class Solution0:
         return output_arr
     
     
+# Attempt 2 - Bucket Sort
+# Time complexity: O(n)
+# Space complexity: O(n)
+class Solution1:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        # Use a hashmap to track the number of frequencies
+        counts = {}
+        for number in nums:
+            # Add to hashmap in correct place
+            if number in counts:
+                counts[number] = counts[number] + 1
+            else:
+                 counts[number] = 1
+            
+        # Implement bucket sort
+        # Initialise number of buckets to acomodate every possible frequency
+        buckets = [[] for _ in range(len(nums) + 1)]
+        # Index the buckets by frequency
+        for num, freq in counts.items():
+            # Add each number to the list at its index
+            buckets[freq].append(num)
+
+        output_array = [] 
+
+        # Iterate backwards over the buckets to get the highest frequency first
+        for i in range(len(buckets)-1, 0, -1):
+             for num in buckets[i]:
+                output_array.append(num)
+                if len(output_array) == k:
+                    # Stop when K number of results is reached
+                    return output_array
+
+    
+    
 # Model Solution - Bucket Sort
 # Time complexity: O(n)
 # Space complexity: O(n)
