@@ -5,6 +5,8 @@
 # You may return the output in any order.
 
 # Attempt 1 - Hashmap / Heap
+# Time complexity: O(k * n)
+# Space complexity: O(n)
 class Solution0:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         # Create a hashmap to store a counter for each number in the list.
@@ -37,7 +39,8 @@ class Solution0:
     
     
 # Model Solution - Bucket Sort
-
+# Time complexity: O(n)
+# Space complexity: O(n)
 class SolutionM:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         count = {}
