@@ -8,6 +8,7 @@
 4. [Group Anagrams](/arrays_and_hashing/group_anagrams.py)
 5. [Top K Elements](/arrays_and_hashing/top_K_elements.py)
 6. [Encode and Decode Strings](/arrays_and_hashing/encode_decode_strings.py)
+7. [Product of Array Except Self](/arrays_and_hashing/product_of_array_except_self.py)
 
 ## Prerequisites
 
@@ -264,6 +265,7 @@ This can be explained visually by the following diagram:
 ### Prefix Sum
 
 What is a Prefix Sum?
+
 A prefix sum at index i is the sum of all elements of the array from the start up to index i, inclusive.
 A Prefix Sum Array is an array representation of the Prefix Sum at **every index in a list**.
 For example:
