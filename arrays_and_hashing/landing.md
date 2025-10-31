@@ -9,6 +9,7 @@
 5. [Top K Elements](/arrays_and_hashing/top_K_elements.py)
 6. [Encode and Decode Strings](/arrays_and_hashing/encode_decode_strings.py)
 7. [Product of Array Except Self](/arrays_and_hashing/product_of_array_except_self.py)
+8. [Valid Sudoku](/arrays_and_hashing/valid_sudoku.py)
 
 ## Prerequisites
 
@@ -17,6 +18,8 @@
 - [Hashmaps](#hashmaps)
 - [Sets](#sets)
 - [Prefix Sum](#prefix-sum)
+- [Postfix Sum](#postfix-sum)
+- [Pre/Post-fix Product](#pre--post-fix-product)
 
 ### Copies
 
@@ -316,3 +319,27 @@ Visualised:
     Is the same as:
         prefix_array[i] = prefix_array[i - 1] + input_array[i]
 ```
+
+### Postfix Sum
+
+This is the same idea as Prefix Sum, but simply reversed. So for every item i, the Postfix Sum is the Sum of all items that proceed it (*Come after it*).
+
+```python
+    input_array = [10, 20, 10, 5, 15]
+
+    # Declare an array of identical size to that of the input array
+    prefix_array = [0] * len(input_array)
+
+    # Initialise the first element of the prefix array
+    prefix_array[len(input_array) -1] = input_array[len(input_array) -1]
+
+    # Loop through the remaining elements
+    for i in range(len(input_array)-2, -1, -1):
+        prefix_array[i] = prefix_array[i + 1] + input_array[i]
+
+    print(prefix_array)  # Output: [60, 50, 30, 20, 15]
+```
+
+### Pre / Post-fix Product
+
+This is exactly the same as Pre / Post-fix sum, but instead of summing the values, we multiply the items to get the product.
