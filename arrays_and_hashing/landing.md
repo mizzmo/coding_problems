@@ -10,6 +10,7 @@
 6. [Encode and Decode Strings](/arrays_and_hashing/encode_decode_strings.py)
 7. [Product of Array Except Self](/arrays_and_hashing/product_of_array_except_self.py)
 8. [Valid Sudoku](/arrays_and_hashing/valid_sudoku.py)
+9. [Longest Consecutive Sequence](/arrays_and_hashing/longest_consecutive_sequence.py)
 
 ## Prerequisites
 
