@@ -40,3 +40,59 @@ class MinStack0:
                 min = item
         return min
         
+        
+# Attempt 2: Two stacks for min tracking
+# Time Complexity: O(1)
+# Space Complexity: O(n)
+class MinStack1:
+    def __init__(self):
+        self.stack = []
+        self.min_stack = []
+
+    def push(self, val: int) -> None:
+        # Add new value to end of stack
+        self.stack.append(val)
+        # Handle first instance
+        if not self.min_stack:
+            self.min_stack.append(val)
+        else:
+            # Append the smaller of the new value or the old min.
+            self.min_stack.append(min(val, self.min_stack[-1]))
+
+    def pop(self) -> None:
+        # Pop both stacks
+        self.stack.pop()
+        self.min_stack.pop()
+
+    def top(self) -> int:
+        # Return last value is stack
+        return self.stack[-1]
+
+    def getMin(self) -> int:
+        # Return last value in min stack
+        return self.min_stack[-1]
+
+
+# Model Answer: Two Stack
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
+class MinStackM:
+    def __init__(self):
+        self.stack = []
+        self.minStack = []
+
+    def push(self, val: int) -> None:
+        self.stack.append(val)
+        val = min(val, self.minStack[-1] if self.minStack else val)
+        self.minStack.append(val)
+
+    def pop(self) -> None:
+        self.stack.pop()
+        self.minStack.pop()
+
+    def top(self) -> int:
+        return self.stack[-1]
+
+    def getMin(self) -> int:
+        return self.minStack[-1]
