@@ -38,11 +38,30 @@ class Solution0:
                     return False
             else:
                 return False
-        # If the stack is empty, the correct number sequence of brackets has occured.
+        # If the stack is empty, the correct number sequence of brackets has occurred.
         if len(stack) == 0:
             return True
         else:
             return False
 
+
+# Model Answer: Stack Backtracking
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+class SolutionM:
+    def isValid(self, s: str) -> bool:
+        stack = []
+        closeToOpen = { ")" : "(", "]" : "[", "}" : "{" }
+
+        for c in s:
+            if c in closeToOpen:
+                if stack and stack[-1] == closeToOpen[c]:
+                    stack.pop()
+                else:
+                    return False
+            else:
+                stack.append(c)
+
+        return True if not stack else False
 
         
