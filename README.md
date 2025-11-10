@@ -8,6 +8,7 @@ It documents my solutions and notes for both LeetCode and NeetCode problems.
 
 ## Contents
 
-1. [Sorting Algorithms](/sorting_algorithms/landing.md)
-2. [Arrays & Hashing](arrays_and_hashing/landing.md)
-3. [Stacks](/stacks/landing.md)
+1. [Python Basics](/python_basics/landing.md)
+2. [Sorting Algorithms](/sorting_algorithms/landing.md)
+3. [Arrays & Hashing](arrays_and_hashing/landing.md)
+4. [Stacks](/stacks/landing.md)

@@ -72,13 +72,12 @@ This is also used to modify the value of properties.
 
 Class properties are shared by all objects of a class.
 
-**When you modify a Class property, it affects all object instances of that class.**
+__When you modify a Class property, it affects all object instances of that class.__
 
 ### Instance Properties
 
 These are properties that belong to the specific object.
-
-**When you modify a Instance property, it affects only that object**
+__When you modify a Instance property, it affects only that object__
 
 ``` python
     class Person:
@@ -102,8 +101,7 @@ These are properties that belong to the specific object.
 ### Class Methods
 
 Methods defined within a class belong to that class and can be called using dot notation (*class.method()*)
-
-**All class methods must have self as their first parameter**
+__All class methods must have self as their first parameter__
 
 Class methods can modify class properties by using self.
 
@@ -135,7 +133,6 @@ By implementing __str__, we can control what is printed.
             return f"{self.name} ({self.age})"
 ```
 
-
 ### Inheritance in Python
 
 Like Java, you can have Parent and Child classes in Python.
@@ -158,7 +155,6 @@ You may also add additional properties while still using the parent __init__ by 
 ```
 
 The Super method is used to inherit all the methods and properties from the Parent, without having to directly reference the parent class.
-
 *The below shows the difference when compared to the previous code snippet*
 
 ``` python
@@ -167,3 +163,4 @@ The Super method is used to inherit all the methods and properties from the Pare
         # Use the Parents init method using Super
         def __init__(self, name):
             super().__init__(self, name)
+```
