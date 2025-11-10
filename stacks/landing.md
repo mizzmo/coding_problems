@@ -2,7 +2,7 @@
 
 ## Problems
 
-1. 
+1. [Valid Parenthesis](/stacks/valid_parentheses.py)
 
 ## Prerequisites
 
