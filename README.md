@@ -10,3 +10,4 @@ It documents my solutions and notes for both LeetCode and NeetCode problems.
 
 1. [Sorting Algorithms](/sorting_algorithms/landing.md)
 2. [Arrays & Hashing](arrays_and_hashing/landing.md)
+3. [Stacks](/stacks/landing.md)
