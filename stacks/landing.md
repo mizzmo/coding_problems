@@ -3,7 +3,9 @@
 ## Problems
 
 1. [Valid Parenthesis](/stacks/valid_parentheses.py)
-2. [Evaluate Reverse Polish Notation](/stacks/evaluate_reverse_polish_notation.py)
+2. [Minimum Stack](/stacks/minimum_stack.py)
+3. [Evaluate Reverse Polish Notation](/stacks/evaluate_reverse_polish_notation.py)
+4. [Daily Temperature](/stacks/daily_temps.py)
 
 ## Prerequisites
 
