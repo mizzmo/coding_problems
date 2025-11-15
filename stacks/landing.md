@@ -3,6 +3,7 @@
 ## Problems
 
 1. [Valid Parenthesis](/stacks/valid_parentheses.py)
+2. [Evaluate Reverse Polish Notation](/stacks/evaluate_reverse_polish_notation.py)
 
 ## Prerequisites
 
