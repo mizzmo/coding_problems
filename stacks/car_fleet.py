@@ -6,7 +6,7 @@ Car Fleet
 # Attempt 1: Stack
 # Time complexity: O(n log n)
 # Space complexity: O(n)
-class Solution:
+class Solution0:
     def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
 
         if len(position) == 1:
@@ -68,9 +68,20 @@ class Solution:
         return len(fleets)
 
             
-
+# Model Solution 1: Stack 
+# Time complexity: O(n log n)
+# Space complexity: O(n)
         
-
+class SolutionM:
+    def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
+        pair = [(p, s) for p, s in zip(position, speed)]
+        pair.sort(reverse=True)
+        stack = []
+        for p, s in pair:  # Reverse Sorted Order
+            stack.append((target - p) / s)
+            if len(stack) >= 2 and stack[-1] <= stack[-2]:
+                stack.pop()
+        return len(stack)
         
 
         
