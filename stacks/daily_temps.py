@@ -46,6 +46,8 @@ class Solution0:
                 stack.append([temperatures[i], i])
         
         return result
+       
+       
                 
 # Model Solution: Stack
 # Time Complexity: O(n)
